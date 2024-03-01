@@ -1,0 +1,116 @@
+@font-face {
+  font-family: Avenir;
+  src: url("/?res=avenir_eot");
+    /*url("https://db.onlinewebfonts.com/t/2090551770be22b09600a40b0b4673b7.woff2")format("woff2"),*/
+  src: url("/?res=avenir_woff")format("woff"),
+    url("/?res=avenir_ttf")format("truetype"),
+    url("/?res=avenir_svg")format("svg");
+}
+
+:root {
+  --sans-serif: Avenir/*, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"*/;
+}
+
+body {
+  margin: 0;
+  top: 0;
+  left: 0;
+  min-height: 100vh;
+  min-width: 100vw;
+  max-height: 100vh;
+  max-width: 100vw;
+  position: absolute;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  margin: 0;
+  display: inline-block;
+}
+
+.root, .app {
+  font-family: var(--sans-serif);
+  min-height: 100vh;
+}
+
+.mH {
+  padding: 1.5em;
+  background-color: #fefefe;
+  border-radius: 10%;
+  max-height: 10vh;
+  display: inline-block;
+  width: calc(100vw - 3em);
+  z-index: 7;
+}
+
+.mH > *:not(img) {
+  display: inherit;
+  margin-top: calc(5vh - .75em);
+}
+
+.logo_h {
+  max-height: inherit;
+  float: inline-end;
+}
+
+.header-sh {
+  position: absolute;
+  width: 100vw;
+  height: calc(10vh + 3em);
+  top: 0;
+  box-shadow: 0 0 40px -14px #000;
+  z-index: 1;
+}
+
+main {
+  position: absolute;
+  min-height: calc(90vh - 3em);
+  min-width: 100vw;
+  max-width: 100vw;
+  bottom: 0;
+}
+
+.app.root {
+  height: 100%;
+}
+
+.footnav {
+  width: calc(100% - 2em);
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  left:0;
+  background-color: #262626;
+  color: #fff;
+  padding: 1em;
+}
+.footnav > a {
+  padding: 0 2em;
+}
+.footnav a.active {
+  color: #d4c0a5;
+}
+.footnav a:not(.active) {
+  color: #fff;
+}
+
+.mainNav > span, .footnav > span {
+  display: block;
+  width: 100%;
+}
+.mainNav > span > span, .footnav > span > span {
+  display: inline-block;
+  width: 50%;
+  text-align: center;
+}
+.mainNav a.active {
+  color: #d4c0a5;
+}
+.mainNav a:not(.active) {
+  color: #000;
+}
+
+@media (max-device-width:500px) {
+  .logo_h {
+    max-height: 3em;
+  }
+}
